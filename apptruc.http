@@ -1,0 +1,36 @@
+# Authorization User
+# đăng ký người dùng
+
+POST https://ytemoi.com/api/app/app_dangky
+content-type: application/json
+
+{
+    "sdt": "0962635719",
+    "apptoken": "" ,
+    "typedevice": ""
+}
+
+# xác thực otp 
+
+###
+POST https://ytemoi.com/api/app/app_xacthuc
+content-type: application/json
+
+{
+    "sdt": "0962635719",
+    "otp": "4325"
+}
+
+#load vai tro
+
+###
+POST https://ytemoi.com/api/app/app_nvyt_loadvaitro
+content-type: application/json
+
+{
+    "sdt": "0962635719",
+    "idnguoidung": "61542c802afa5d06d42418a6"
+}
+
+#return
+# "{ \"ketqua\" : \"Success\", \"code\" : null, \"mes\" : null, \"idnguoidung\" : null, \"databson\" : { \"dsvaitro\" : [] }, \"bn\" : null, \"nv\" : null, \"dichvu\" : null, \"giuong\" : null, \"idsukien\" : null }"
